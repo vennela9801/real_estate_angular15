@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import {MatButtonModule} from '@angular/material/button';
+import {MatButtonModule, MatIconButton} from '@angular/material/button';
 import {MatCardModule} from  '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatToolbarModule, MatToolbarRow} from '@angular/material/toolbar';
@@ -23,6 +23,9 @@ import { HeaderComponent } from './core/header/header.component';
 import { MatListModule } from '@angular/material/list';
 import { NavigationListComponent } from './core/navigation-list/navigation-list.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HomeContentComponent } from './components/home-content/home-content.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HomeComponent,
     LoginComponent,
     HeaderComponent,
-    NavigationListComponent
+    NavigationListComponent,
+    HomeContentComponent
   ],
   imports: [
     FormsModule,
@@ -50,7 +54,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatProgressSpinnerModule,
     MatSidenavModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatIconModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

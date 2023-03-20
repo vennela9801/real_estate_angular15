@@ -22,3 +22,10 @@ mat-toolbar{
         border-radius: 0px;
     }
 }
+
+.parent{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
