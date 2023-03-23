@@ -26,6 +26,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { AddNewHouseComponent } from './components/add-new-house/add-new-house.component';
+import { AddAgentComponent } from './components/add-agent/add-agent.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     LoginComponent,
     HeaderComponent,
     NavigationListComponent,
-    HomeContentComponent
+    HomeContentComponent,
+    AddNewHouseComponent,
+    AddAgentComponent
   ],
   imports: [
     FormsModule,

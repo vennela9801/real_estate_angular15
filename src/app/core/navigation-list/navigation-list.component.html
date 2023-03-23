@@ -2,11 +2,17 @@
     <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
         <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
     </a>
-    <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
+    <!-- <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
         <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Owner Actions</span>   
     </a>
     <a mat-list-item routerLink="#" (click)="onSidenavClose()">
         <mat-icon>account_balance</mat-icon><span class="nav-caption">Account Actions</span>
+    </a> -->
+    <a mat-list-item routerLink="/addNewHome" (click)="onSidenavClose()">
+        <mat-icon>home</mat-icon> <span class="nav-caption">Add New Home</span>
+    </a>
+    <a mat-list-item routerLink="/addNewAgent" (click)="onSidenavClose()">
+        <mat-icon>person_add</mat-icon> <span class="nav-caption">Add New Agent</span>
     </a>
     <mat-list-item [matMenuTriggerFor]="menu">
         <mat-icon>unfold_more</mat-icon>
