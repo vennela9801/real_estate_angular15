@@ -1,18 +1,21 @@
 export class HouseModel {
+    houseOwner: string = '';
     houseType: string = '';
     houseRate: string = '';
+    floors : number = 0;
+    floorSpace : string = '';
     bedRoomCount: number = 0;
     totalbaths: string = '';
+    availabilityStatus : string = 'available';
     areaCovered: string = '';
     builtYear: number = 1900;
     description: string = '';
     address: string = '';
+    county : string = '';
     city: string ='';
     state: string = '';
     postalCode: number = 94043;
-    agentname : string = '';
-    agentContact : string = '';
-    agentEmail : string = '';
+    agentId : number = 0;
     
 
 }

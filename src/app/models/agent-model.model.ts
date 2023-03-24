@@ -1,6 +1,7 @@
 export class AgentModel {
 
-    agentName : string = '';
+    agentFirstName : string = '';
+    agentLastName : string = '';
     agentContact: string = '';
     agentEmail: string = '';
     agentAddress : string = '';

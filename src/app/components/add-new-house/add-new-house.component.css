@@ -15,7 +15,7 @@
     position: absolute;
     top: 40%;
     left:40%;
-    transform: translate(-40%,-35%);
+    transform: translate(-80%,-35%);
   }
 
   mat-card-header{
@@ -30,5 +30,5 @@
 
   mat-card{
     padding:0;
-    width: 130%;
+    width: 220%;
   }

@@ -28,6 +28,7 @@ import { HomeContentComponent } from './components/home-content/home-content.com
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AddNewHouseComponent } from './components/add-new-house/add-new-house.component';
 import { AddAgentComponent } from './components/add-agent/add-agent.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AddAgentComponent } from './components/add-agent/add-agent.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     CommonModule, 
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule, 
     MatCardModule,
