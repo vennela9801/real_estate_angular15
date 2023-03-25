@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { AgentModel } from '../models/agent-model.model';
 import { ResponseStatus } from '../models/response-status.model';
+import { SearchModel } from '../models/search-model.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,14 @@ export class CommonServiceService {
   addNewAgent(agent: AgentModel): Observable<ResponseStatus> {
     let url = 'http://localhost:8080/realEstate/addNewAgent';
     return this.http.post<ResponseStatus>(url,agent,this.httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  searchRecords(searchModel: SearchModel): Observable<ResponseStatus> {
+    let url = 'http://localhost:8080/realEstate/searchRequest';
+    return this.http.post<ResponseStatus>(url,searchModel,this.httpOptions)
     .pipe(
       catchError(this.handleError)
     );

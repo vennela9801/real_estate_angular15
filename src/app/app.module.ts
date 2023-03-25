@@ -29,6 +29,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { AddNewHouseComponent } from './components/add-new-house/add-new-house.component';
 import { AddAgentComponent } from './components/add-agent/add-agent.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateHomeDetailsComponent } from './components/update-home-details/update-home-details.component';
+import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationListComponent,
     HomeContentComponent,
     AddNewHouseComponent,
-    AddAgentComponent
+    AddAgentComponent,
+    UpdateHomeDetailsComponent,
+    AdvancedSearchComponent
   ],
   imports: [
     FormsModule,

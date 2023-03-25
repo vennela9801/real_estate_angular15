@@ -1,3 +1,5 @@
+import { AddressModel } from "./address-model.model";
+
 export class HouseModel {
     houseOwner: string = '';
     houseType: string = '';
@@ -10,12 +12,9 @@ export class HouseModel {
     areaCovered: string = '';
     builtYear: number = 1900;
     description: string = '';
-    address: string = '';
-    county : string = '';
-    city: string ='';
-    state: string = '';
-    postalCode: number = 94043;
+    address: AddressModel = new AddressModel;
     agentId : number = 0;
+    id: number = 0;
     
 
 }

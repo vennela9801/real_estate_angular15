@@ -7,5 +7,5 @@ export class AgentModel {
     agentAddress : string = '';
     city : string = '';
     state : string = '';
-    zipCode : number = 90876;   
+    zipCode : number = 90876;  
 }
