@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { AgentModel } from '../models/agent-model.model';
+import { HomeOwnerModel } from '../models/home-owner-model.model';
+import { HouseModel } from '../models/house-model.model';
 import { ResponseStatus } from '../models/response-status.model';
 import { SearchModel } from '../models/search-model.model';
 
@@ -31,6 +33,38 @@ export class CommonServiceService {
   searchRecords(searchModel: SearchModel): Observable<ResponseStatus> {
     let url = 'http://localhost:8080/realEstate/searchRequest';
     return this.http.post<ResponseStatus>(url,searchModel,this.httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  saveorUpdateHome(newHouse :HouseModel): Observable<ResponseStatus> {
+    let url = 'http://localhost:8080/realEstate/saveHomeDetails';
+    return this.http.post<ResponseStatus>(url,newHouse,this.httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  deleteHome(newHouse :HouseModel): Observable<ResponseStatus> {
+    let url = 'http://localhost:8080/realEstate/deleteHomeDetails';
+    return this.http.post<ResponseStatus>(url,newHouse,this.httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  addHouseOwners(houseOwner :HomeOwnerModel): Observable<ResponseStatus> {
+    let url = 'http://localhost:8080/realEstate/saveHomeOwners';
+    return this.http.post<ResponseStatus>(url,houseOwner,this.httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  fetchHomeDetails(homeID : any){
+    let url = 'http://localhost:8080/realEstate/fetchHomeDetails?homeId='+homeID;
+    return this.http.get<ResponseStatus>(url,this.httpOptions)
     .pipe(
       catchError(this.handleError)
     );

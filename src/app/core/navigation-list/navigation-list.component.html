@@ -17,12 +17,15 @@
     <a mat-list-item routerLink="/addNewAgent" (click)="onSidenavClose()">
         <mat-icon>person_add</mat-icon> <span class="nav-caption">Add New Agent</span>
     </a>
-    <mat-list-item [matMenuTriggerFor]="menu">
+    <a mat-list-item routerLink="/addHomeOwner" (click)="onSidenavClose()">
+        <mat-icon>person_add</mat-icon> <span class="nav-caption">Add Home Owners</span>
+    </a>
+    <!-- <mat-list-item [matMenuTriggerFor]="menu">
         <mat-icon>unfold_more</mat-icon>
         <a matline style="color: black;">Example</a>
     </mat-list-item>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="onSidenavClose()">View profile</button>
       <button mat-menu-item (click)="onSidenavClose()">Add contact</button>
-    </mat-menu>
+    </mat-menu> -->
   </mat-nav-list>

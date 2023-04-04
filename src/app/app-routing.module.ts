@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddAgentComponent } from './components/add-agent/add-agent.component';
+import { AddHomeOwnerComponent } from './components/add-home-owner/add-home-owner.component';
 import { AddNewHouseComponent } from './components/add-new-house/add-new-house.component';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'updateHome', component: UpdateHomeDetailsComponent},
   {path:'updateHomeDetails', component : AddNewHouseComponent},
   {path:'advanced-search', component : AdvancedSearchComponent},
+  {path:'addHomeOwner',component: AddHomeOwnerComponent},
 ];
 
 @NgModule({

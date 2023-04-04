@@ -13,5 +13,6 @@ export class SearchModel {
     availabilityStatus : string = 'available';
     areaCovered: string = '';
     builtYear: string = '';
+    agentID: string = '';
     
 }

@@ -15,7 +15,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatToolbarModule, MatToolbarRow} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatInputModule} from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
@@ -24,6 +23,7 @@ import { MatListModule } from '@angular/material/list';
 import { NavigationListComponent } from './core/navigation-list/navigation-list.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AddNewHouseComponent } from './components/add-new-house/add-new-house.component';
@@ -31,6 +31,10 @@ import { AddAgentComponent } from './components/add-agent/add-agent.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateHomeDetailsComponent } from './components/update-home-details/update-home-details.component';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
+import {AgGridModule} from "ag-grid-angular/main";
+import { AddHomeOwnerComponent } from './components/add-home-owner/add-home-owner.component';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +47,8 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
     AddNewHouseComponent,
     AddAgentComponent,
     UpdateHomeDetailsComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    AddHomeOwnerComponent
   ],
   imports: [
     FormsModule,
@@ -61,13 +66,16 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
     MatTableModule,
     MatMenuModule,
     MatIconModule,
-    MatProgressSpinnerModule,
     MatSidenavModule,
     MatListModule,
     FlexLayoutModule,
     MatFormFieldModule,
     MatIconModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    AgGridModule.withComponents([]),
+    MatDatepickerModule,
+    MatNativeDateModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
