@@ -45,7 +45,7 @@ export class AdvancedSearchComponent implements OnInit{
         }
         else if(this.searchModel.condition1 == 'condition3'){
           this.columns =  ['houseOwner', 'houseType','price','yearConstructed','applianceName','makeYear'];
-        }else if(this.searchModel.condition1 == 'condition4' || this.searchModel.condition1 == 'condition7'){
+        }else if(this.searchModel.condition1 == 'condition4' || this.searchModel.condition1 == 'condition7' || this.searchModel.condition1 == 'condition6'){
           this.columns =  ['firstName', 'lastName','price','houseType','yearConstructed','address','city','state','zipCode','status'];
         }else if(this.searchModel.condition1 == 'condition5'){
           this.columns =  ['agentFirstName', 'agentLastName','totalCommission'];
