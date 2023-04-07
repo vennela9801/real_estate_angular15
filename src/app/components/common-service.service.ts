@@ -70,6 +70,14 @@ export class CommonServiceService {
     );
   }
 
+  fetchHomeOwnerDetails(ownerId : any){
+    let url = 'http://localhost:8080/realEstate/fetchHomeOwnerDetails?ownerId='+ownerId;
+    return this.http.get<ResponseStatus>(url,this.httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.

@@ -3,7 +3,8 @@
 
         <mat-card class="example-card">
             <mat-card-header>
-                <mat-card-title>Home Owner Details</mat-card-title>
+                <span *ngIf="existingHouse">Update Home Owner Details</span>
+                <span *ngIf="!existingHouse">Home Owner Details</span>
             </mat-card-header>
         </mat-card>
 
@@ -32,10 +33,10 @@
 
             <tr>
                 <td> <mat-form-field class="example-full-width">
-                    <mat-label> SSN</mat-label>
-                    <input matInput required placeholder="" [(ngModel)]="homeOwner.ssn"
-                        [ngModelOptions]="{standalone: true}">
-                </mat-form-field></td>
+                        <mat-label> SSN</mat-label>
+                        <input matInput required placeholder="" [(ngModel)]="homeOwner.ssn"
+                            [ngModelOptions]="{standalone: true}">
+                    </mat-form-field></td>
                 <td> <mat-form-field class="example-full-width">
                         <mat-label> Profession</mat-label>
                         <input matInput required placeholder="Software Developer" [(ngModel)]="homeOwner.profession"
@@ -44,10 +45,10 @@
             </tr>
             <tr>
                 <td> <mat-form-field class="example-full-width">
-                    <mat-label> Contact</mat-label>
-                    <input matInput required placeholder="" [(ngModel)]="homeOwner.contact"
-                        [ngModelOptions]="{standalone: true}">
-                </mat-form-field></td>
+                        <mat-label> Contact</mat-label>
+                        <input matInput required placeholder="" [(ngModel)]="homeOwner.contact"
+                            [ngModelOptions]="{standalone: true}">
+                    </mat-form-field></td>
                 <td> <mat-form-field class="example-full-width">
                         <mat-label> Email</mat-label>
                         <input matInput required placeholder="example@test.com" [(ngModel)]="homeOwner.email"
@@ -58,30 +59,36 @@
         <p>
             <mat-form-field class="example-full-width">
                 <mat-label>Address</mat-label>
-                <textarea matInput required placeholder="Ex. 100 Main St"  [(ngModel)]="homeOwner.address.address" [ngModelOptions]="{standalone: true}"></textarea>
+                <textarea matInput required placeholder="Ex. 100 Main St" [(ngModel)]="homeOwner.address.address"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </mat-form-field>
         </p>
 
         <table class="example-full-width" cellspacing="0">
             <tr>
                 <td><mat-form-field class="example-full-width">
-                    <mat-label>City</mat-label>
-                    <input matInput required placeholder="Ex. San Francisco" [(ngModel)]="homeOwner.address.city" [ngModelOptions]="{standalone: true}">
-                </mat-form-field></td>
-            <td><mat-form-field class="example-full-width">
-                    <mat-label>State</mat-label>
-                    <input matInput required placeholder="Ex. California" [(ngModel)]="homeOwner.address.state" [ngModelOptions]="{standalone: true}">
-                </mat-form-field></td>
-            <td><mat-form-field class="example-full-width">
-                    <mat-label>Postal Code</mat-label>
-                    <input matInput required #postalCode maxlength="5" placeholder="Ex. 94105" value="94043" [(ngModel)]="homeOwner.address.postalCode" [ngModelOptions]="{standalone: true}">
-                    <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-                </mat-form-field></td>
+                        <mat-label>City</mat-label>
+                        <input matInput required placeholder="Ex. San Francisco" [(ngModel)]="homeOwner.address.city"
+                            [ngModelOptions]="{standalone: true}">
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>State</mat-label>
+                        <input matInput required placeholder="Ex. California" [(ngModel)]="homeOwner.address.state"
+                            [ngModelOptions]="{standalone: true}">
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Postal Code</mat-label>
+                        <input matInput required #postalCode maxlength="5" placeholder="Ex. 94105" value="94043"
+                            [(ngModel)]="homeOwner.address.postalCode" [ngModelOptions]="{standalone: true}">
+                        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                    </mat-form-field></td>
             </tr>
             <tr>
                 <td style="padding-left: 5rem; padding-top: 3rem;">
-                    <button mat-button style="width: 80%; background-color: #3f51b5;"
-                        (click)="addHomeOwner()">Add</button>
+                    <button mat-button style="width: 80%; background-color: #3f51b5;" (click)="addHomeOwner()">
+                        <span *ngIf="existingHouse">Update</span>
+                        <span *ngIf="!existingHouse">Add</span>
+                    </button>
                 </td>
                 <td style="  padding-top: 3rem;">
                     <button mat-button style="width: 60%; background-color: gainsboro;"

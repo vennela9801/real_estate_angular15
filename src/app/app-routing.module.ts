@@ -7,6 +7,7 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { UpdateHomeDetailsComponent } from './components/update-home-details/update-home-details.component';
+import { UpdateHomeOwnersComponent } from './components/update-home-owners/update-home-owners.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path:'updateHomeDetails', component : AddNewHouseComponent},
   {path:'advanced-search', component : AdvancedSearchComponent},
   {path:'addHomeOwner',component: AddHomeOwnerComponent},
+  {path:'updateHomeOwnerDetails', component: AddHomeOwnerComponent},
+  {path:'updateHomeOwner', component: UpdateHomeOwnersComponent},
 ];
 
 @NgModule({

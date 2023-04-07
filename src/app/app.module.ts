@@ -34,6 +34,7 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
 import {AgGridModule} from "ag-grid-angular/main";
 import { AddHomeOwnerComponent } from './components/add-home-owner/add-home-owner.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { UpdateHomeOwnersComponent } from './components/update-home-owners/update-home-owners.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AddAgentComponent,
     UpdateHomeDetailsComponent,
     AdvancedSearchComponent,
-    AddHomeOwnerComponent
+    AddHomeOwnerComponent,
+    UpdateHomeOwnersComponent
   ],
   imports: [
     FormsModule,
